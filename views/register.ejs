@@ -1,0 +1,21 @@
+<div class="container" style="max-width: 1170px; margin: auto;">
+    <%- include('./header.ejs') %>
+</div>
+
+<div class="container" style="max-width: 1170px; margin: auto;">
+    <div class="row" style="padding-top: 30px;"> 
+        <p><%- responseMessage %></p>
+        <form action="/userregister" method="POST">
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your User Name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your Email">
+        
+            <label for="password">password</label>
+            <input type="text" id="password" name="password" placeholder="Enter your password">
+        
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const User = require('../models/userModel')
+const User = require('../../models/userModel')
 
 // @desc Register the new user
 // @route GET /api/users/register
@@ -35,7 +35,9 @@ const registerUser = asyncHandler(async (req, res) => {
 // @route GET /api/users/login
 // @access public
 const loginUser = asyncHandler(async (req, res) => {
+    // console.log('req body login :', req.body);
     const { email, password } = req.body
+    console.log(email, password);
     if (!email || !password) {
         json.status(400)
         throw new Error('All fields are mandotery!')
